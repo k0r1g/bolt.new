@@ -28,11 +28,11 @@ interface BaseChatProps {
 }
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a todo app in React using Tailwind' },
-  { text: 'Build a simple blog using Astro' },
-  { text: 'Create a cookie consent form using Material UI' },
-  { text: 'Make a space invaders game' },
-  { text: 'How do I center a div?' },
+  { text: 'Write a Haldane model Hamiltonian on a hexagonal lattice...' },
+  { text: 'Solve the matrix equation Ax=b using the weighted Jacobi iteration...' },
+  { text: 'Create a function performing Lanczos Iteration...' },
+  { text: "Employ Mannella's leapfrog method to solve the Langevin equation..." },
+  { text: 'Write a script to implement the Crank-Nicolson method...' },
 ];
 
 const TEXTAREA_MIN_HEIGHT = 76;
@@ -74,10 +74,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto">
                 <h1 className="text-5xl text-center font-bold text-bolt-elements-textPrimary mb-2">
-                  Where ideas begin
+                  Generate research code for in vivo fluorescence microscopy
                 </h1>
                 <p className="mb-4 text-center text-bolt-elements-textSecondary">
-                  Bring ideas to life in seconds or get help on existing projects.
+                  Solve real scientific problems.
                 </p>
               </div>
             )}
@@ -130,7 +130,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       minHeight: TEXTAREA_MIN_HEIGHT,
                       maxHeight: TEXTAREA_MAX_HEIGHT,
                     }}
-                    placeholder="How can Bolt help you today?"
+                    placeholder="Think of AutoRAND as a really smart friend you're going to send a DM to solve a problem. Plan your prompt & specify well."
                     translate="no"
                   />
                   <ClientOnly>
